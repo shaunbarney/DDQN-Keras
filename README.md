@@ -8,4 +8,4 @@
 5) Pass Agent and Env to train function
 
 ### Test on 
-    - [x] CartPole-v0
+- [x] CartPole-v0
