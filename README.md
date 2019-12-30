@@ -7,5 +7,5 @@
 4) Instantiate Agent with EnvSetup
 5) Pass Agent and Env to train function
 
-### Test on 
+### Tested on and weights saved:
 - [x] CartPole-v0
