@@ -4,7 +4,7 @@ from ddqn import Agent
 from envs.cartpole.setup import CartPoleSetup
 
 def train_setup(agent: Agent, env: gym.Env):
-    num_games = 1000
+    num_games = 150
     n_step = 0
     best_score = 0
     scores = []

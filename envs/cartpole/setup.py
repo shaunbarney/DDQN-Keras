@@ -5,17 +5,10 @@ from envs.base_setup import BaseSetup
 
 class CartPoleSetup(BaseSetup):
     def __init__(self, env: gym.Env):
-        super().__init__()
-        self.__env = env
+        super().__init__(env)
+        self.learning_rate = 0.005
+        self.mem_size = int(1e4)
         
-    @property
-    def env(self):
-        return self.__env
-
-    @env.setter
-    def env(self, env):
-        self.__env = env
-    
     def _build_model(self):
         return build_model(self.learning_rate, self.n_actions, self.input_shape)
     

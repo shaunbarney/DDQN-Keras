@@ -17,13 +17,22 @@ class BaseSetup:
     _q_values_target_fname = 'q_target_values.h5'
     
     
-    def __init__(self):
+    def __init__(self, env):
         self.__check_dirs_exist()
+        self.__env = env
     
     @property
     def env(self) -> gym.Env:
         """Add Gym Environment Here"""
         raise NotImplementedError("Gym environment required")
+
+    @property
+    def env(self):
+        return self.__env
+
+    @env.setter
+    def env(self, env):
+        self.__env = env
     
     @property
     def input_shape(self) -> tuple:
