@@ -14,5 +14,5 @@ class CartPoleSetup(BaseSetup):
     
     @property
     def base_dir(self):
-        return '/Users/shaunbarney/Documents/ReinforcementLearning/DDQN/envs/cartpole'
+        return '/home/shaun/Documents/ReinforcementLearning/Gym/DDQN/envs/cartpole'
 

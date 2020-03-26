@@ -2,6 +2,7 @@ import os
 import gym
 import tensorflow as tf
 
+
 class BaseSetup:
     gamma = 0.99
     load_checkpoint = False

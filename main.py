@@ -23,11 +23,15 @@ def train_setup(agent: Agent, env: gym.Env):
             agent.remember(state, action, reward, new_state, int(done))
             agent.learn()
             state = new_state
+            if score == 200:
+                print(f"Score maxed")
+                done = True
+
 
         scores.append(score)
 
-        print(f"Game: {i}\tScore: {score}\tEpsilon: {agent.epsilon}'\t")
         avg_score = np.mean(scores[-100:])
+        print(f"Game: {i}\tScore: {score}\tEpsilon: {agent.epsilon}'\tAverage score: {avg_score}")
         if avg_score > best_score:
             print("New best average.")
             agent.save_models()
